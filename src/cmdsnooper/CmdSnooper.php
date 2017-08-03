@@ -25,11 +25,11 @@ class CmdSnooper extends PluginBase {
 		 	if($sender instanceof Player) {
 				if($sender->hasPermission("snoop.command")) {
 					if(!isset($this->snoopers[$sender->getName()])) {
-						$sender->sendMessage("§7Snoop> §fYou have entered snoop mode");
+						$sender->sendMessage("§c[Security] You have entered snoop mode !");
 						$this->snoopers[$sender->getName()] = $sender;
 						return true;
 					} else {
-						$sender->sendMessage("§7Snoop> §fYou have left snoop mode");
+						$sender->sendMessage("§c[Security] You have left snoop mode !");
 						unset($this->snoopers[$sender->getName()]);
 						return true;
 					}
